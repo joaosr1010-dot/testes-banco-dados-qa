@@ -4,18 +4,20 @@
 
 ## 🎯 Objetivo do projeto
 
-Simular testes em banco de dados utilizando SQL, validando:
-- Inserção de dados
-- Consultas
-- Integridade das informações
+Simular testes em banco de dados utilizando SQL, com foco na:
+
+* Validação de dados
+* Execução de consultas
+* Identificação de inconsistências
+* Verificação de integridade entre tabelas
 
 ---
 
 ## 📌 Sobre o projeto
 
-Este projeto tem como objetivo praticar testes em banco de dados utilizando SQLite, simulando cenários reais de validação de dados e identificação de inconsistências.
+Este projeto tem como objetivo praticar testes em banco de dados utilizando SQLite, simulando cenários reais de validação e análise de dados.
 
-Os testes foram realizados com base em consultas SQL (SELECT), validando o estado final dos dados armazenados no banco.
+Os testes foram realizados por meio de consultas SQL (SELECT), permitindo validar o estado final das informações armazenadas no banco.
 
 ---
 
@@ -25,26 +27,36 @@ Os testes foram realizados com base em consultas SQL (SELECT), validando o estad
 * Escrita de queries SQL (SELECT, WHERE, JOIN)
 * Validação de dados
 * Identificação de inconsistências
-* Documentação de testes (test cases)
+* Documentação de testes (casos de teste)
 * Registro de bugs
 
 ---
 
-## 🗂 Estrutura do banco
+## 🗄️ Estrutura do banco de dados
+
+O projeto utiliza duas tabelas principais:
 
 ### Tabela: usuarios
 
-* id (chave primária)
-* nome
-* email
-* idade
+```sql
+CREATE TABLE usuarios (
+  id INTEGER PRIMARY KEY,
+  nome TEXT,
+  email TEXT,
+  idade INTEGER
+);
+```
 
 ### Tabela: pedidos
 
-* id (chave primária)
-* usuario_id
-* produto
-* valor
+```sql
+CREATE TABLE pedidos (
+  id INTEGER PRIMARY KEY,
+  usuario_id INTEGER,
+  produto TEXT,
+  valor REAL
+);
+```
 
 ---
 
@@ -66,7 +78,7 @@ Os testes realizados incluem:
 * Relacionamento entre tabelas (JOIN)
 * Identificação de pedidos com usuário inexistente
 
-📄 Detalhes completos em: `test-cases.md`
+📄 Detalhes completos em: `casos-de-teste.md`
 
 ---
 
@@ -79,7 +91,7 @@ Durante os testes, foram identificados os seguintes problemas:
 * Permissão de idade negativa
 * Pedido associado a usuário inexistente
 
-📄 Detalhes completos em: `bug-report.md`
+📄 Detalhes completos em: `relatorio-de-bugs.md`
 
 ---
 
@@ -113,6 +125,17 @@ Contendo prints das execuções das queries utilizadas nos testes.
 
 * Melhor tratamento de integridade dos dados
   → Para garantir consistência e confiabilidade nas informações armazenadas.
+
+---
+
+## 🧠 Aprendizados
+
+Durante o desenvolvimento deste projeto, foi possível compreender:
+
+* A importância da validação de dados no banco
+* Como consultas SQL podem ser utilizadas para testes
+* A necessidade de garantir integridade entre tabelas
+* Como documentar testes e evidências de forma estruturada
 
 ---
 

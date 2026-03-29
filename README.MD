@@ -1,5 +1,16 @@
 # 📊 Projeto de Testes em Banco de Dados (SQLite)
 
+---
+
+## 🎯 Objetivo do projeto
+
+Simular testes em banco de dados utilizando SQL, validando:
+- Inserção de dados
+- Consultas
+- Integridade das informações
+
+---
+
 ## 📌 Sobre o projeto
 
 Este projeto tem como objetivo praticar testes em banco de dados utilizando SQLite, simulando cenários reais de validação de dados e identificação de inconsistências.
